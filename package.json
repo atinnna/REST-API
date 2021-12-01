@@ -1,0 +1,17 @@
+{
+  "name": "restof",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^15.0.3",
+    "express": "^4.17.1",
+    "joi": "^17.4.2"
+  }
+}
