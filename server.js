@@ -26,7 +26,7 @@ function validasiIsi(data){
     return JOI.validate(data,aturan)
 }
 
-// buat api
+//create
 app.post('/api/pengguna',(req,res)=>{
     const tambah_data = {
         id : uuidv4(),
@@ -41,13 +41,13 @@ app.post('/api/pengguna',(req,res)=>{
     res.send(tambah_data)
 })
 
-// menampilkan semua isi api
+// read
 app.get('/api/pengguna',(req,res)=>{
     const penggunaAll = penggunanya
     res.send(penggunaAll)
 })
 
-// menampilkan api dengan nama tertentu
+//cari berdaarkan namanya
 app.get('/api/pengguna/:nama',(req,res)=>{
     let nama = req.params.nama
     const findNama = penggunanya.find(x=>x.nama === nama)
@@ -55,7 +55,7 @@ app.get('/api/pengguna/:nama',(req,res)=>{
     res.send(findNama)
 })
 
-// mengedit api berdasarkan id
+// edit berdasarkan id
 app.put('/api/pengguna/:id', (req,res)=>{
     idnya = req.params.id
     const Pengguna = penggunanya.find(y=>y.id === idnya )
@@ -70,7 +70,7 @@ app.put('/api/pengguna/:id', (req,res)=>{
 
 })
 
-// mengahpus api berdasarkan id
+// mengahpus berdasarkan id
 app.delete('/api/pengguna/:id',(req,res)=>{
     idnya = req.params.id
     const findPengguna = penggunanya.find(z=>z.id === idnya)
